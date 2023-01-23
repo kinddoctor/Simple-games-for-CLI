@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/kinddoctor/frontend-project-44.git"
   },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }, 
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kinddoctor/frontend-project-44/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/kinddoctor/frontend-project-44#readme"
 }
