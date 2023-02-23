@@ -5,3 +5,5 @@
 Example of how "brain-even" game works: https://asciinema.org/a/xpaRG24QR18IsBzzJz5wzUhqT
 
 Example of how "brain-calc" game works: https://asciinema.org/a/XhJYxyA18DpaOCaRWMPiDSVvV
+
+Example of how "brain-gcd" game works: https://asciinema.org/a/3XtBgmpaWbtYD9WlJv3Xe3tj6
