@@ -1,8 +1,8 @@
 import processOfGame from '../index.js';
-import { randomNumber } from '../utils.js';
+import { randomNumber, isEven } from '../utils.js';
 import readlineSync from 'readline-sync';
 
-const check = (number) => number % 2 === 0 ? 'yes' : 'no';
+const check = (number) => isEven(number) ? 'yes' : 'no';
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameRound = () => {
