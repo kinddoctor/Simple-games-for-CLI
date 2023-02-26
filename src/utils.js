@@ -2,6 +2,8 @@
 
 export const randomNumber = () => Math.round(Math.random() * 100);
 
+export const smallRandomNumber = () => Math.round(Math.random() * 10);
+
 export const isEven = (number) => number % 2 === 0;
 
 export const getOperator = (num) => {
