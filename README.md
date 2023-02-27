@@ -9,3 +9,5 @@ Example of how "brain-calc" game works: https://asciinema.org/a/XhJYxyA18DpaOCaR
 Example of how "brain-gcd" game works: https://asciinema.org/a/3XtBgmpaWbtYD9WlJv3Xe3tj6
 
 Example of how "brain-progression" game works: https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ
+
+Example of how "brain-prime" game works: https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu
