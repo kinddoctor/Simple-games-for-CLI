@@ -12,15 +12,16 @@ const introduction = 'What number is missing in the progression?';
 const gameRound = () => {
   const arrayOfNums = [];
   const number1 = randomNumber();
-  const stepOfProgression = () => {
-    const result = smallRandomNumber();
-    return result > 1 ? result : result + 1;
-  };
+  const stepOfProgression = randomNumber();
   arrayOfNums.push(number1);
   for (let i = 1; i < 10; i += 1) {
     arrayOfNums[i] = arrayOfNums[i - 1] + stepOfProgression;
   }
-  const placeOfTheGap = smallRandomNumber();
+  const getTheGap = () => {
+    const result = smallRandomNumber();
+    return result > 1 ? result : result + 1;
+  };
+  const placeOfTheGap = getTheGap();
   arrayOfNums[placeOfTheGap] = '..';
   const progression = arrayOfNums.join(' ');
 
