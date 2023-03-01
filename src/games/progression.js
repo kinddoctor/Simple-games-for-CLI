@@ -12,7 +12,10 @@ const introduction = 'What number is missing in the progression?';
 const gameRound = () => {
   const arrayOfNums = [];
   const number1 = randomNumber();
-  const stepOfProgression = smallRandomNumber();
+  const stepOfProgression = () => {
+    const result = smallRandomNumber();
+    return result > 1 ? result : result + 1;
+  };
   arrayOfNums.push(number1);
   for (let i = 1; i < 10; i += 1) {
     arrayOfNums[i] = arrayOfNums[i - 1] + stepOfProgression;
