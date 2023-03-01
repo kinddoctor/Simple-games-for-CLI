@@ -1,4 +1,4 @@
-
+export const bigRandomNumber = () => Math.round(Math.random() * 1000);
 
 export const randomNumber = () => Math.round(Math.random() * 100);
 
