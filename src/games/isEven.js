@@ -1,12 +1,16 @@
-import processOfGame from '../index.js';
-import { randomNumber, isEven } from '../utils.js';
 import readlineSync from 'readline-sync';
+import processOfGame from '../index.js';
+import { bigRandomNumber, isEven } from '../utils.js';
 
-const check = (number) => isEven(number) ? 'yes' : 'no';
+const check = (number) => {
+  const result = isEven(number) ? 'yes' : 'no';
+  return result;
+};
+
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameRound = () => {
-  const number = randomNumber();
+  const number = bigRandomNumber();
   const userAnswer = readlineSync.question(`Question: ${number}\nYou answer:`);
   const expectedAnswer = check(number);
   if (userAnswer === expectedAnswer) {
@@ -15,4 +19,4 @@ const gameRound = () => {
   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
 };
 
-export const isEvenGame = processOfGame(introduction, gameRound, check);
+export default () => processOfGame(introduction, gameRound);

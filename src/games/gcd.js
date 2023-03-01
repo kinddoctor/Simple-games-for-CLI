@@ -1,12 +1,12 @@
+import readlineSync from 'readline-sync';
 import processOfGame from '../index.js';
 import { randomNumber, gcd } from '../utils.js';
-import readlineSync from 'readline-sync';
 
 const check = (number1, number2) => {
   const nums = {};
   if (number1 > number2) {
-   nums.big = number1;
-   nums.small = number2;
+    nums.big = number1;
+    nums.small = number2;
   } else {
     nums.big = number2;
     nums.small = number1;
@@ -26,4 +26,4 @@ const gameRound = () => {
   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
 };
 
-export const gcdGame = processOfGame(introduction, gameRound, check);
+export default () => processOfGame(introduction, gameRound);

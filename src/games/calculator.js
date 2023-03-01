@@ -1,16 +1,23 @@
+import readlineSync from 'readline-sync';
 import processOfGame from '../index.js';
 import { randomNumber, getOperator } from '../utils.js';
-import readlineSync from 'readline-sync';
 
 const check = (number1, number2, operator) => {
+  let operation;
   switch (operator) {
     case '+':
-      return number1 + number2;
+      operation = number1 + number2;
+      break;
     case '-':
-      return number1 - number2;
+      operation = number1 - number2;
+      break;
     case '*':
-      return number1 * number2;
+      operation = number1 * number2;
+      break;
+    default:
+      operation = 0;
   }
+  return operation;
 };
 
 const introduction = 'What is the result of the expression?';
@@ -28,4 +35,4 @@ const gameRound = () => {
   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
 };
 
-export const calculationGame = processOfGame(introduction, gameRound, check);
+export default () => processOfGame(introduction, gameRound);
