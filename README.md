@@ -17,7 +17,7 @@
 
 5. brain-prime - is given number prime or not
 
-**Type in "*<name_of_the_game>*" in the main directory of the package ande enjoy**
+**Type in "*<name_of_the_game>*" in the main directory of the package and enjoy**
 
 
 Example of how "brain-even" game works: https://asciinema.org/a/xpaRG24QR18IsBzzJz5wzUhqT
