@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
-import processOfGame from '../index.js';
-import { randomNumber, smallRandomNumber } from '../utils.js';
+import setTheGame from '../index.js';
+import { getRandomNumber } from '../utils.js';
+
+const middleSizeOfNumber = 100;
+const smallSizeOfNumber = 10;
 
 const check = (arrayOfNums, placeOfTheGap, stepOfProgression) => {
   const previousNumberIndex = placeOfTheGap - 1;
@@ -9,16 +12,16 @@ const check = (arrayOfNums, placeOfTheGap, stepOfProgression) => {
 
 const introduction = 'What number is missing in the progression?';
 
-const gameRound = () => {
+const setGameRound = () => {
   const arrayOfNums = [];
-  const number1 = randomNumber();
-  const stepOfProgression = randomNumber();
+  const number1 = getRandomNumber(middleSizeOfNumber);
+  const stepOfProgression = getRandomNumber(middleSizeOfNumber);
   arrayOfNums.push(number1);
   for (let i = 1; i < 10; i += 1) {
     arrayOfNums[i] = arrayOfNums[i - 1] + stepOfProgression;
   }
   const getTheGap = () => {
-    const result = smallRandomNumber();
+    const result = getRandomNumber(smallSizeOfNumber);
     return result > 1 ? result : result + 1;
   };
   const placeOfTheGap = getTheGap();
@@ -33,4 +36,4 @@ const gameRound = () => {
   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
 };
 
-export default () => processOfGame(introduction, gameRound);
+export default () => setTheGame(introduction, setGameRound);

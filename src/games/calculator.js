@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
-import processOfGame from '../index.js';
-import { randomNumber, getOperator } from '../utils.js';
+import setTheGame from '../index.js';
+import { getRandomNumber, getOperator } from '../utils.js';
+
+const middleSizeOfNumber = 100;
 
 const check = (number1, number2, operator) => {
   let operation;
@@ -22,9 +24,9 @@ const check = (number1, number2, operator) => {
 
 const introduction = 'What is the result of the expression?';
 
-const gameRound = () => {
-  const number1 = randomNumber();
-  const number2 = randomNumber();
+const setGameRound = () => {
+  const number1 = getRandomNumber(middleSizeOfNumber);
+  const number2 = getRandomNumber(middleSizeOfNumber);
   const operator = getOperator(number1);
 
   const userAnswer = readlineSync.question(`Question: ${number1} ${operator} ${number2}\nYou answer:`);
@@ -35,4 +37,4 @@ const gameRound = () => {
   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
 };
 
-export default () => processOfGame(introduction, gameRound);
+export default () => setTheGame(introduction, setGameRound);

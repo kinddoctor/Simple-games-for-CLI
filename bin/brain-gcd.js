@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gcdGame from '../src/games/gcd.js';
+import setFindGreatestDividerGame from '../src/games/gcd.js';
 
-gcdGame();
+setFindGreatestDividerGame();

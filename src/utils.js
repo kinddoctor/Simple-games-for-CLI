@@ -1,8 +1,4 @@
-export const bigRandomNumber = () => Math.round(Math.random() * 1000);
-
-export const randomNumber = () => Math.round(Math.random() * 100);
-
-export const smallRandomNumber = () => Math.round(Math.random() * 10);
+export const getRandomNumber = (size) => Math.round(Math.random() * size);
 
 export const isEven = (number) => number % 2 === 0;
 
@@ -13,11 +9,11 @@ export const getOperator = (num) => {
   return num % 2 === 0 ? '-' : '*';
 };
 
-export const gcd = (a, b) => {
+export const getCommonDivider = (a, b) => {
   if (!b) {
     return a;
   }
-  return gcd(b, a % b);
+  return getCommonDivider(b, a % b);
 };
 
 export const isPrime = (num) => {
