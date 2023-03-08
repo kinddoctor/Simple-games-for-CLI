@@ -6,7 +6,8 @@ export default (intro, setGameRound) => {
   console.log(`Hello, ${userName}!`);
 
   console.log(intro);
-  for (let i = 1; i <= 3; i += 1) {
+  const maxAmountOfGameRounds = 3;
+  for (let i = 1; i <= maxAmountOfGameRounds; i += 1) {
     const game = setGameRound();
     if (game === 'Correct!') {
       console.log(game);
