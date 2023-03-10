@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import setTheGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
@@ -28,12 +27,9 @@ const setGameRound = () => {
   arrayOfNums[placeOfTheGap] = '..';
   const progression = arrayOfNums.join(' ');
 
-  const userAnswer = readlineSync.question(`Question: ${progression}\nYou answer: `);
+  const question = `${progression}`;
   const expectedAnswer = check(arrayOfNums, placeOfTheGap, stepOfProgression).toString();
-  if (userAnswer === expectedAnswer) {
-    return 'Correct!';
-  }
-  return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
+  return [question, expectedAnswer];
 };
 
 export default () => setTheGame(introduction, setGameRound);

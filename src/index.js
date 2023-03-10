@@ -8,12 +8,12 @@ export default (intro, setGameRound) => {
   console.log(intro);
   const maxAmountOfGameRounds = 3;
   for (let i = 1; i <= maxAmountOfGameRounds; i += 1) {
-    const game = setGameRound();
-    if (game === 'Correct!') {
-      console.log(game);
+    const [question, expectedAnswer] = setGameRound();
+    const userAnswer = readlineSync.question(`Question: ${question}\nYou answer:`);
+    if (userAnswer === expectedAnswer) {
+      console.log('Correct!');
     } else {
-      console.log(game);
-      return console.log(`Let's try again, ${userName}!`);
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`);
     }
   }
   return console.log(`Congratulations, ${userName}!`);

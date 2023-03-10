@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import setTheGame from '../index.js';
 import { getRandomNumber, getOperator } from '../utils.js';
 
@@ -29,12 +28,9 @@ const setGameRound = () => {
   const number2 = getRandomNumber(middleSizeOfNumber);
   const operator = getOperator(number1);
 
-  const userAnswer = readlineSync.question(`Question: ${number1} ${operator} ${number2}\nYou answer:`);
+  const question = `${number1} ${operator} ${number2}`;
   const expectedAnswer = check(number1, number2, operator).toString();
-  if (userAnswer === expectedAnswer) {
-    return 'Correct!';
-  }
-  return `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`;
+  return [question, expectedAnswer];
 };
 
 export default () => setTheGame(introduction, setGameRound);
