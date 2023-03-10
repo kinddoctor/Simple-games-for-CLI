@@ -19,7 +19,7 @@ const introduction = 'Find the greatest common divisor of given numbers.';
 const setGameRound = () => {
   const number1 = getRandomNumber(middleSizeOfNumber);
   const number2 = getRandomNumber(middleSizeOfNumber);
-  const question = ` ${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const expectedAnswer = check(number1, number2).toString();
   return [question, expectedAnswer];
 };
