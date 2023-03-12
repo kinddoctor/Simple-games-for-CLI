@@ -1,7 +1,9 @@
 import setTheGame from '../index.js';
-import { getRandomNumber, isEven } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 1000;
+
+const isEven = (number) => number % 2 === 0;
 
 const checkIfNumIsEven = (number) => {
   const result = isEven(number) ? 'yes' : 'no';

@@ -1,7 +1,14 @@
 import setTheGame from '../index.js';
-import { getRandomNumber, getOperator } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 100;
+
+const getOperator = (num) => {
+  if (num % 3 === 0 || num % 7 === 0) {
+    return '+';
+  }
+  return num % 2 === 0 ? '-' : '*';
+};
 
 const check = (number1, number2, operator) => {
   let operation;

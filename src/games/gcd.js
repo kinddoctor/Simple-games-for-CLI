@@ -1,7 +1,14 @@
 import setTheGame from '../index.js';
-import { getRandomNumber, getCommonDivider } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 100;
+
+const getCommonDivider = (a, b) => {
+  if (!b) {
+    return a;
+  }
+  return getCommonDivider(b, a % b);
+};
 
 const check = (number1, number2) => {
   const nums = {};

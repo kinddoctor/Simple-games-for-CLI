@@ -1,7 +1,16 @@
 import setTheGame from '../index.js';
-import { getRandomNumber, isPrime } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 100;
+
+const isPrime = (num) => {
+  for (let i = 2; i <= num / 3; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const checkIfNumIsPrime = (number) => {
   const result = isPrime(number) ? 'yes' : 'no';

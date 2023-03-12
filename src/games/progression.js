@@ -1,5 +1,5 @@
 import setTheGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 100;
 const smallSizeOfNumber = 10;
