@@ -23,7 +23,7 @@ const check = (number1, number2, operator) => {
       operation = number1 * number2;
       break;
     default:
-      operation = 0;
+      throw new Error(`Unknown kind of operetor: '${operator}'!!`);
   }
   return operation;
 };
