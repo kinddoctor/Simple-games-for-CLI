@@ -10,7 +10,7 @@ const getCommonDivider = (a, b) => {
   return getCommonDivider(b, a % b);
 };
 
-const check = (number1, number2) => {
+const calculateCorrectAnswer = (number1, number2) => {
   const nums = {};
   if (number1 > number2) {
     nums.big = number1;
@@ -23,12 +23,12 @@ const check = (number1, number2) => {
 };
 
 const introduction = 'Find the greatest common divisor of given numbers.';
-const setGameRound = () => {
+const generateGameRound = () => {
   const number1 = getRandomNumber(middleSizeOfNumber);
   const number2 = getRandomNumber(middleSizeOfNumber);
   const question = `${number1} ${number2}`;
-  const expectedAnswer = check(number1, number2).toString();
+  const expectedAnswer = calculateCorrectAnswer(number1, number2).toString();
   return [question, expectedAnswer];
 };
 
-export default () => setTheGame(introduction, setGameRound);
+export default () => setTheGame(introduction, generateGameRound);

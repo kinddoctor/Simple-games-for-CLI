@@ -12,11 +12,11 @@ const checkIfNumIsEven = (number) => {
 
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const setGameRound = () => {
+const generateGameRound = () => {
   const number = getRandomNumber(middleSizeOfNumber);
   const question = `${number}`;
   const expectedAnswer = checkIfNumIsEven(number);
   return [question, expectedAnswer];
 };
 
-export default () => setTheGame(introduction, setGameRound);
+export default () => setTheGame(introduction, generateGameRound);

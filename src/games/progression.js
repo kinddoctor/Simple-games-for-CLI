@@ -4,14 +4,14 @@ import getRandomNumber from '../utils.js';
 const middleSizeOfNumber = 100;
 const smallSizeOfNumber = 10;
 
-const check = (arrayOfNums, placeOfTheGap, stepOfProgression) => {
+const calculateCorrectAnswer = (arrayOfNums, placeOfTheGap, stepOfProgression) => {
   const previousNumberIndex = placeOfTheGap - 1;
   return arrayOfNums[previousNumberIndex] + stepOfProgression;
 };
 
 const introduction = 'What number is missing in the progression?';
 
-const setGameRound = () => {
+const generateGameRound = () => {
   const arrayOfNums = [];
   const number1 = getRandomNumber(middleSizeOfNumber);
   const stepOfProgression = getRandomNumber(middleSizeOfNumber);
@@ -28,8 +28,9 @@ const setGameRound = () => {
   const progression = arrayOfNums.join(' ');
 
   const question = `${progression}`;
-  const expectedAnswer = check(arrayOfNums, placeOfTheGap, stepOfProgression).toString();
+  const correctAnswer = calculateCorrectAnswer(arrayOfNums, placeOfTheGap, stepOfProgression);
+  const expectedAnswer = correctAnswer.toString();
   return [question, expectedAnswer];
 };
 
-export default () => setTheGame(introduction, setGameRound);
+export default () => setTheGame(introduction, generateGameRound);

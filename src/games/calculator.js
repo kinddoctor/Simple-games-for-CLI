@@ -10,7 +10,7 @@ const getOperator = (num) => {
   return num % 2 === 0 ? '-' : '*';
 };
 
-const check = (number1, number2, operator) => {
+const calculateCorrectAnswer = (number1, number2, operator) => {
   let result;
   switch (operator) {
     case '+':
@@ -30,14 +30,14 @@ const check = (number1, number2, operator) => {
 
 const introduction = 'What is the result of the expression?';
 
-const setGameRound = () => {
+const generateGameRound = () => {
   const number1 = getRandomNumber(middleSizeOfNumber);
   const number2 = getRandomNumber(middleSizeOfNumber);
   const operator = getOperator(number1);
 
   const question = `${number1} ${operator} ${number2}`;
-  const expectedAnswer = check(number1, number2, operator).toString();
+  const expectedAnswer = calculateCorrectAnswer(number1, number2, operator).toString();
   return [question, expectedAnswer];
 };
 
-export default () => setTheGame(introduction, setGameRound);
+export default () => setTheGame(introduction, generateGameRound);
