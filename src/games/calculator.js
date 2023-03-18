@@ -11,21 +11,21 @@ const getOperator = (num) => {
 };
 
 const check = (number1, number2, operator) => {
-  let operation;
+  let result;
   switch (operator) {
     case '+':
-      operation = number1 + number2;
+      result = number1 + number2;
       break;
     case '-':
-      operation = number1 - number2;
+      result = number1 - number2;
       break;
     case '*':
-      operation = number1 * number2;
+      result = number1 * number2;
       break;
     default:
-      throw new Error(`Unknown kind of operetor: '${operator}'!!`);
+      throw new Error(`Unknown kind of operator: '${operator}'!`);
   }
-  return operation;
+  return result;
 };
 
 const introduction = 'What is the result of the expression?';
