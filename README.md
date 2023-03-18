@@ -29,12 +29,17 @@ This is a package, which includes 5 simple mathematical games, such as "Is numbe
 **Want to see the process of the game first? Here you are:**
 
 
-Example of how "brain-even" game works: https://asciinema.org/a/xpaRG24QR18IsBzzJz5wzUhqT
+Example of how "brain-even" game works: 
+[![asciicast](https://asciinema.org/a/xpaRG24QR18IsBzzJz5wzUhqT.svg)](https://asciinema.org/a/xpaRG24QR18IsBzzJz5wzUhqT)
 
-Example of how "brain-calc" game works: https://asciinema.org/a/XhJYxyA18DpaOCaRWMPiDSVvV
+Example of how "brain-calc" game works: 
+[![asciicast](https://asciinema.org/a/XhJYxyA18DpaOCaRWMPiDSVvV.svg)](https://asciinema.org/a/XhJYxyA18DpaOCaRWMPiDSVvV)
 
-Example of how "brain-gcd" game works: https://asciinema.org/a/3XtBgmpaWbtYD9WlJv3Xe3tj6
+Example of how "brain-gcd" game works: 
+[![asciicast](https://asciinema.org/a/3XtBgmpaWbtYD9WlJv3Xe3tj6.svg)](https://asciinema.org/a/3XtBgmpaWbtYD9WlJv3Xe3tj6)
 
-Example of how "brain-progression" game works: https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ
+Example of how "brain-progression" game works: 
+[![asciicast](https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ.svg)] (https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ)
 
-Example of how "brain-prime" game works: https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu
+Example of how "brain-prime" game works: 
+[![asciicast](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu)](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu)
