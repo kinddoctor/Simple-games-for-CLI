@@ -42,4 +42,4 @@ Example of how "brain-progression" game works:
 [![asciicast](https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ.svg)] (https://asciinema.org/a/obs3IFq6BZkp9wh0mg7qFzLhZ)
 
 Example of how "brain-prime" game works: 
-[![asciicast](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu)](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu)
+[![asciicast](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu.svg)](https://asciinema.org/a/apA67ZKpPSr7ORhhVOgUJpjfu)
