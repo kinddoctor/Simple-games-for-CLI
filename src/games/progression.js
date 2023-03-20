@@ -1,4 +1,4 @@
-import setTheGame from '../index.js';
+import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const middleSizeOfNumber = 100;
@@ -33,4 +33,4 @@ const generateGameRound = () => {
   return [question, expectedAnswer];
 };
 
-export default () => setTheGame(introduction, generateGameRound);
+export default () => generateTheGame(introduction, generateGameRound);
