@@ -8,7 +8,7 @@ _Small games for your brain_
 This is a package, which includes 5 simple mathematical games, such as "Is number even?" etc. Each game could include up to three game rounds. If you give a correct answer in current round, you will continue the game, otherwise the programm will correct you and invite you to try again.
 
  
-**To install** this package you need to have preinstalled nodejs package. Then type in "*npm install frontend-project-44*" and after that type "*npm link*" in the main directory of this package 
+**To install** this package you need to have preinstalled nodejs package with **JavaScript corresponding to ECMAScript 2016 (7th Edition)** or higher and **npm version 1.4.10** or higher. You need to type in "*npm install frontend-project-44*" in console (in home directory) and after that type "*npm link*" in the main directory of this package 
 
 *Now you can start the game you want to play, choose among the following:*
 
