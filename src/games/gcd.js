@@ -12,13 +12,8 @@ const getCommonDivider = (a, b) => {
 
 const calculateCorrectAnswer = (number1, number2) => {
   const nums = {};
-  if (number1 > number2) {
-    nums.big = number1;
-    nums.small = number2;
-  } else {
-    nums.big = number2;
-    nums.small = number1;
-  }
+  nums.big = Math.max(number1, number2);
+  nums.small = Math.min(number1, number2);
   return getCommonDivider(nums.big, nums.small);
 };
 
