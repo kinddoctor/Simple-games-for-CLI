@@ -1,12 +1,9 @@
 import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const smallSizeOfNumber = 10;
-const middleSizeOfNumber = 100;
-
 const getOperator = () => {
   const arrayOfOperators = ['-', '+', '*'];
-  const placeOfOperator = getRandomNumber(smallSizeOfNumber);
+  const placeOfOperator = getRandomNumber(0, 10);
   if (placeOfOperator > 2) {
     return getOperator();
   }
@@ -34,8 +31,8 @@ const calculateCorrectAnswer = (number1, number2, operator) => {
 const introduction = 'What is the result of the expression?';
 
 const generateGameRound = () => {
-  const number1 = getRandomNumber(middleSizeOfNumber);
-  const number2 = getRandomNumber(middleSizeOfNumber);
+  const number1 = getRandomNumber(10, 100);
+  const number2 = getRandomNumber(10, 100);
   const operator = getOperator(number1);
 
   const question = `${number1} ${operator} ${number2}`;

@@ -1,8 +1,6 @@
 import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const middleSizeOfNumber = 100;
-
 const isPrime = (num) => {
   if (num === 0 || num === 1) {
     return false;
@@ -19,7 +17,7 @@ const checkIfNumIsPrime = (number) => (isPrime(number) ? 'yes' : 'no');
 
 const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const generateGameRound = () => {
-  const number = getRandomNumber(middleSizeOfNumber);
+  const number = getRandomNumber(10, 100);
   const question = `${number}`;
   const expectedAnswer = checkIfNumIsPrime(number);
   return [question, expectedAnswer];

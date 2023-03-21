@@ -1,8 +1,6 @@
 import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const middleSizeOfNumber = 100;
-
 const getCommonDivider = (a, b) => {
   if (!b) {
     return a;
@@ -19,8 +17,8 @@ const calculateCorrectAnswer = (number1, number2) => {
 
 const introduction = 'Find the greatest common divisor of given numbers.';
 const generateGameRound = () => {
-  const number1 = getRandomNumber(middleSizeOfNumber);
-  const number2 = getRandomNumber(middleSizeOfNumber);
+  const number1 = getRandomNumber(10, 100);
+  const number2 = getRandomNumber(10, 100);
   const question = `${number1} ${number2}`;
   const expectedAnswer = calculateCorrectAnswer(number1, number2).toString();
   return [question, expectedAnswer];
