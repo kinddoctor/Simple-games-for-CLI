@@ -1,13 +1,16 @@
 import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
+const smallSizeOfNumber = 10;
 const middleSizeOfNumber = 100;
 
-const getOperator = (num) => {
-  if (num % 3 === 0 || num % 7 === 0) {
-    return '+';
+const getOperator = () => {
+  const arrayOfOperators = ['-', '+', '*'];
+  const placeOfOperator = getRandomNumber(smallSizeOfNumber);
+  if (placeOfOperator > 2) {
+    return getOperator();
   }
-  return num % 2 === 0 ? '-' : '*';
+  return arrayOfOperators[placeOfOperator];
 };
 
 const calculateCorrectAnswer = (number1, number2, operator) => {
