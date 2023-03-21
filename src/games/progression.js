@@ -9,9 +9,7 @@ const calculateCorrectAnswer = (arrayOfNums, placeOfTheGap, stepOfProgression) =
   return arrayOfNums[previousNumberIndex] + stepOfProgression;
 };
 
-const introduction = 'What number is missing in the progression?';
-
-const generateGameRound = () => {
+const getTheProgression = () => {
   const arrayOfNums = [];
   const number1 = getRandomNumber(middleSizeOfNumber);
   const stepOfProgression = getRandomNumber(middleSizeOfNumber);
@@ -26,7 +24,13 @@ const generateGameRound = () => {
   const placeOfTheGap = getTheGap();
   arrayOfNums[placeOfTheGap] = '..';
   const progression = arrayOfNums.join(' ');
+  return [arrayOfNums, placeOfTheGap, stepOfProgression, progression];
+};
 
+const introduction = 'What number is missing in the progression?';
+
+const generateGameRound = () => {
+  const [arrayOfNums, placeOfTheGap, stepOfProgression, progression] = getTheProgression();
   const question = `${progression}`;
   const correctAnswer = calculateCorrectAnswer(arrayOfNums, placeOfTheGap, stepOfProgression);
   const expectedAnswer = correctAnswer.toString();
