@@ -6,6 +6,9 @@ const middleSizeOfNumber = 1000;
 const isEven = (number) => number % 2 === 0;
 
 const checkIfNumIsEven = (number) => {
+  if (number === 0) {
+    return 'no';
+  }
   const result = isEven(number) ? 'yes' : 'no';
   return result;
 };
