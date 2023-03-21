@@ -4,6 +4,9 @@ import getRandomNumber from '../utils.js';
 const middleSizeOfNumber = 100;
 
 const isPrime = (num) => {
+  if (num === 0 || num === 1) {
+    return false;
+  }
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
@@ -12,10 +15,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const checkIfNumIsPrime = (number) => {
-  const result = isPrime(number) ? 'yes' : 'no';
-  return result;
-};
+const checkIfNumIsPrime = (number) => (isPrime(number) ? 'yes' : 'no');
 
 const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const generateGameRound = () => {
