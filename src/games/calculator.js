@@ -2,30 +2,22 @@ import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const getOperator = () => {
-  const arrayOfOperators = ['-', '+', '*'];
-  const placeOfOperator = getRandomNumber(0, 10);
-  if (placeOfOperator > 2) {
-    return getOperator();
-  }
-  return arrayOfOperators[placeOfOperator];
+  const operators = ['-', '+', '*'];
+  const operatorIndex = getRandomNumber(0, operators.length - 1);
+  return operators[operatorIndex];
 };
 
 const calculateCorrectAnswer = (number1, number2, operator) => {
-  let result;
   switch (operator) {
     case '+':
-      result = number1 + number2;
-      break;
+      return number1 + number2;
     case '-':
-      result = number1 - number2;
-      break;
+      return number1 - number2;
     case '*':
-      result = number1 * number2;
-      break;
+      return number1 * number2;
     default:
       throw new Error(`Unknown kind of operator: '${operator}'!`);
   }
-  return result;
 };
 
 const introduction = 'What is the result of the expression?';
