@@ -9,10 +9,9 @@ const getCommonDivider = (a, b) => {
 };
 
 const calculateCorrectAnswer = (number1, number2) => {
-  const nums = {};
-  nums.big = Math.max(number1, number2);
-  nums.small = Math.min(number1, number2);
-  return getCommonDivider(nums.big, nums.small);
+  const bigNumber = Math.max(number1, number2);
+  const smallNumber = Math.min(number1, number2);
+  return getCommonDivider(bigNumber, smallNumber);
 };
 
 const introduction = 'Find the greatest common divisor of given numbers.';
