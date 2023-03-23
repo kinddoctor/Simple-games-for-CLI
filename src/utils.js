@@ -1,5 +1,3 @@
-const getRandomNumber = (min = 1, max = 100) => {
-  const number = Math.round(Math.random() * max);
-  return number >= min ? number : getRandomNumber(min, max);
-};
+const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 export default getRandomNumber;
