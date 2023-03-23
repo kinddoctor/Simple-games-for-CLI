@@ -17,7 +17,7 @@ const checkIfNumIsPrime = (number) => (isPrime(number) ? 'yes' : 'no');
 
 const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const generateRoundData = () => {
-  const number = getRandomNumber(10, 100);
+  const number = getRandomNumber();
   const question = `${number}`;
   const expectedAnswer = checkIfNumIsPrime(number);
   return [question, expectedAnswer];

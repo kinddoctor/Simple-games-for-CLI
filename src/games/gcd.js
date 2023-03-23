@@ -16,8 +16,8 @@ const calculateCorrectAnswer = (number1, number2) => {
 
 const introduction = 'Find the greatest common divisor of given numbers.';
 const generateRoundData = () => {
-  const number1 = getRandomNumber(10, 100);
-  const number2 = getRandomNumber(10, 100);
+  const number1 = getRandomNumber();
+  const number2 = getRandomNumber();
   const question = `${number1} ${number2}`;
   const expectedAnswer = calculateCorrectAnswer(number1, number2).toString();
   return [question, expectedAnswer];

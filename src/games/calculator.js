@@ -23,9 +23,9 @@ const calculateCorrectAnswer = (number1, number2, operator) => {
 const introduction = 'What is the result of the expression?';
 
 const generateRoundData = () => {
-  const number1 = getRandomNumber(10, 100);
-  const number2 = getRandomNumber(10, 100);
-  const operator = getOperator(number1);
+  const number1 = getRandomNumber();
+  const number2 = getRandomNumber();
+  const operator = getOperator();
 
   const question = `${number1} ${operator} ${number2}`;
   const expectedAnswer = calculateCorrectAnswer(number1, number2, operator).toString();

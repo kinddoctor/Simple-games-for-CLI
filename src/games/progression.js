@@ -4,8 +4,8 @@ import getRandomNumber from '../utils.js';
 const getDataForProgression = () => {
   const nums = [];
   const lengthOfProgression = 10;
-  const number1 = getRandomNumber(10, 100);
-  const stepOfProgression = getRandomNumber(10, 100);
+  const number1 = getRandomNumber();
+  const stepOfProgression = getRandomNumber();
   nums.push(number1);
   for (let i = 1; i <= lengthOfProgression; i += 1) {
     nums[i] = nums[i - 1] + stepOfProgression;

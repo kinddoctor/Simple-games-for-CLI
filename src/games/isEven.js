@@ -8,7 +8,7 @@ const checkIfNumIsEven = (number) => (isEven(number) ? 'yes' : 'no');
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateRoundData = () => {
-  const number = getRandomNumber(100, 1000);
+  const number = getRandomNumber();
   const question = `${number}`;
   const expectedAnswer = checkIfNumIsEven(number);
   return [question, expectedAnswer];
