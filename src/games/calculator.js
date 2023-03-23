@@ -22,7 +22,7 @@ const calculateCorrectAnswer = (number1, number2, operator) => {
 
 const introduction = 'What is the result of the expression?';
 
-const generateGameRound = () => {
+const generateRoundData = () => {
   const number1 = getRandomNumber(10, 100);
   const number2 = getRandomNumber(10, 100);
   const operator = getOperator(number1);
@@ -32,4 +32,4 @@ const generateGameRound = () => {
   return [question, expectedAnswer];
 };
 
-export default () => generateTheGame(introduction, generateGameRound);
+export default () => generateTheGame(introduction, generateRoundData);

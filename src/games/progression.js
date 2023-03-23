@@ -1,33 +1,31 @@
 import generateTheGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const calculateCorrectAnswer = (arrayOfNums, placeOfTheGap, stepOfProgression) => {
-  const previousNumberIndex = placeOfTheGap - 1;
-  return arrayOfNums[previousNumberIndex] + stepOfProgression;
-};
-
-const getTheProgression = () => {
-  const arrayOfNums = [];
+const getDataForProgression = () => {
+  const nums = [];
+  const lengthOfProgression = 10;
   const number1 = getRandomNumber(10, 100);
   const stepOfProgression = getRandomNumber(10, 100);
-  arrayOfNums.push(number1);
-  for (let i = 1; i < 10; i += 1) {
-    arrayOfNums[i] = arrayOfNums[i - 1] + stepOfProgression;
+  nums.push(number1);
+  for (let i = 1; i <= lengthOfProgression; i += 1) {
+    nums[i] = nums[i - 1] + stepOfProgression;
   }
-  const placeOfTheGap = getRandomNumber(1, 10);
-  arrayOfNums[placeOfTheGap] = '..';
-  const progression = arrayOfNums.join(' ');
-  return [arrayOfNums, placeOfTheGap, stepOfProgression, progression];
+  const indexOfTheGap = getRandomNumber(0, lengthOfProgression - 1);
+  const gap = '..';
+  return [nums, indexOfTheGap, gap];
 };
 
 const introduction = 'What number is missing in the progression?';
 
-const generateGameRound = () => {
-  const [arrayOfNums, placeOfTheGap, stepOfProgression, progression] = getTheProgression();
-  const question = `${progression}`;
-  const correctAnswer = calculateCorrectAnswer(arrayOfNums, placeOfTheGap, stepOfProgression);
+const generateRoundData = () => {
+  const [nums, indexOfTheGap, gap] = getDataForProgression();
+  const correctAnswer = nums[indexOfTheGap];
   const expectedAnswer = correctAnswer.toString();
+
+  nums[indexOfTheGap] = gap;
+  const progression = nums.join(' ');
+  const question = `${progression}`;
   return [question, expectedAnswer];
 };
 
-export default () => generateTheGame(introduction, generateGameRound);
+export default () => generateTheGame(introduction, generateRoundData);

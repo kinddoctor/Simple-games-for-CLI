@@ -7,11 +7,11 @@ const checkIfNumIsEven = (number) => (isEven(number) ? 'yes' : 'no');
 
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const generateGameRound = () => {
+const generateRoundData = () => {
   const number = getRandomNumber(100, 1000);
   const question = `${number}`;
   const expectedAnswer = checkIfNumIsEven(number);
   return [question, expectedAnswer];
 };
 
-export default () => generateTheGame(introduction, generateGameRound);
+export default () => generateTheGame(introduction, generateRoundData);
